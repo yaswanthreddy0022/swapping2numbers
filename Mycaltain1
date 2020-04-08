@@ -1,0 +1,28 @@
+#include <stdio.h>
+int main()
+{
+    int num1, num2;
+
+    //Storing first number entered by user in num1
+    printf("Enter First Number: ");
+    scanf("%d", &num1);
+
+    //Storing second number entered by user in num2
+    printf("Enter Second Number: ");
+    scanf("%d",&num2);
+
+    printf("Before swapping:\n");
+    printf("num1 is: %d and num2 is: %d\n", num1, num2);
+
+    /* This logic swaps the values of num1 and num2
+     * without using a temporary variable.
+     */
+    num1 = num1 - num2;
+    num2 = num1 + num2;
+    num1 = num2 - num1;
+
+    printf("After swapping:\n");
+    printf("num1 is: %d and num2 is: %d", num1, num2);
+
+    return 0;
+}
